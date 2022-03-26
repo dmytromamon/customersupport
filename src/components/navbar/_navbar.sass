@@ -1,0 +1,146 @@
+.navbar
+    width: 100%
+    position: relative
+    z-index: 99
+    // .navbar__inner
+    &__inner
+        display: flex
+        padding-top: 30px
+        padding-bottom: 30px
+    // .navbar__brand
+    &__brand
+        display: flex
+        flex: 0 1 200px
+        font-weight: 600
+        font-size: 32px
+        line-height: 48px
+        color: $black
+        align-self: center
+        &::before
+            display: block
+            content: ''
+            width: 30px
+            height: 30px
+            margin: auto 15px auto -2px
+            background: center / contain no-repeat url('../img/message-text.svg')
+    // .navbar__nav
+    &__nav
+        display: flex
+        gap: 50px
+        justify-content: center
+        flex: 1 0 auto
+    // .navbar__item
+    &__item
+        align-self: center
+        font-size: 1rem
+        line-height: 1.5rem
+        color: $neutral
+        &.active
+            font-weight: 600
+            color: $primary
+        &:hover
+            color: $primary
+    // .navbar__link
+    &__link
+        color: inherit
+        transition: color ease .3s
+    // .navbar__contact
+    &__contact
+        text-align: right
+        align-self: center
+        flex: 0 1 200px
+        strong
+            color: $black
+        small
+            color: $neutral
+        strong, small
+            a
+                transition: color ease .3s
+                &:hover
+                    color: $primary
+    // .navbar__toggler
+    &__toggler
+        display: none
+        width: 44px
+        height: 44px
+        background: $primary
+        border-radius: 12px 12px 0 12px
+        position: relative
+        align-self: center
+        cursor: pointer
+        transition: background ease .3s
+        &:hover
+            background: $primary-500
+        &.active
+            path:nth-child(1)
+                transform: rotate(40deg) translateY(6px)
+            path:nth-child(2)
+                transform: scale(0)
+            path:nth-child(3)
+                transform: rotate(-40deg) translateY(-6px)
+        svg
+            margin: auto
+            overflow: visible
+            path
+                transform-origin: center
+                transition: transform ease .3s
+    @media (max-width: 1199px)
+        // .navbar__nav
+        &__nav
+            gap: 32px
+    @media (max-width: 991px)
+        // .navbar__nav
+        &__nav
+            position: absolute
+            padding: 110px 0 56px
+            top: 0
+            left: 0
+            flex-direction: column
+            gap: 40px
+            width: 100%
+            background: $white
+            z-index: -1
+            transform: translateY(-100%)
+            box-shadow: 0 0 0 rgba($neutral, .2)
+            opacity: 0
+            &.visible
+                box-shadow: 0 0 5px rgba($neutral, .2)
+        // .navbar__contact
+        &__contact
+            margin-left: auto
+            margin-right: 16px
+        // .navbar__toggler
+        &__toggler
+            display: flex
+    @media (max-width: 767px)
+        // .navbar__brand
+        &__brand
+            flex: initial
+            font-size: 24px
+            line-height: 32px
+            &::before
+                margin: auto 10px auto -2px
+        // .navbar__inner
+        &__inner
+            padding-top: 20px
+            padding-bottom: 20px
+        // .navbar__nav
+        &__nav
+            padding: 90px 0 40px
+            gap: 32px
+        // .navbar__contact
+        &__contact
+            flex: initial
+            align-self: center
+            text-align: center
+            margin: 0 auto
+            strong, small
+                display: block
+        // .navbar__toggler
+        &__toggler
+            margin-left: auto
+    @media (min-width: 992px)
+        // .navbar__nav
+        &__nav
+            transform: none !important
+            opacity: 1 !important

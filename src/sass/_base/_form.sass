@@ -1,0 +1,61 @@
+.form-control
+    padding: 17px 20px 17px 50px
+    font-family: 'Poppins', sans-serif
+    font-weight: 400
+    font-size: 1rem
+    line-height: 160%
+    color: $black !important
+    border: 0 !important
+    transition: all ease .2s
+    background: $white
+    border-radius: 32px
+    outline: none !important
+    box-shadow: none !important
+    width: 100%
+    &::placeholder
+        color: $neutral !important
+    &:active, &:focus
+        background: rgba($white, .9)
+
+.form-group
+    position: relative
+    width: 100% !important
+    button
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+    & + .form-group
+        margin-top: 20px
+    .icon
+        width: 18px
+        height: 18px
+        position: absolute
+        top: 20px
+        left: 20px
+        background: 0 0
+        box-shadow: none
+
+form
+    a
+        color: $primary
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+
+#unsubscribe
+    position: relative
+    .form-control
+        width: 100%
+        background: $light
+        &:active, &:focus
+            background: rgba($primary, .12)
+    button
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+    @media (max-width: 575px)
+        button
+            position: relative
+            margin: 20px auto 0

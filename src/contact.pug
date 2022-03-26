@@ -1,0 +1,156 @@
+include ../_blocks/_all-blocks.pug
+
+block vars
+
+    - var SiteName = 'Helsplav'
+    - var PageId = 'contact'
+    - var PageTitle = SiteName + ' — Contact Us'
+    - var PageDescription = 'Helsplav.com is a simplified, reliable and secure support for the management and cancellation of your subscriptions.'
+
+    - var LANG = 'en'
+    - var TITLE  = PageTitle
+    - var DESCRIPTION  = PageDescription
+
+    - var documentMods = ''
+
+    - var ogUrl = 'http://helsplav.com/'
+    - var ogTitle = PageTitle
+    - var ogDescription = PageDescription
+    - var ogType = 'helsplav'
+
+doctype html
+html(lang=LANG class=documentMods)
+  
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='x-ua-compatible' content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no')
+
+        title=TITLE
+        meta(name='description' content=DESCRIPTION)
+
+        meta(property='og:title' content=ogTitle)
+        meta(property='og:description' content=ogDescription)
+        meta(property='og:type' content=ogType)
+        meta(property='og:url' content=ogUrl)
+        meta(property="og:image:width" content="1200")
+        meta(property="og:image:height" content="630")
+        meta(property='og:image' content=ogUrl + 'img/og__image1200x630.jpg?' + releaseDateVer)
+        meta(property='vk:image' content=ogUrl + 'img/og__image1200x630.jpg?' + releaseDateVer)
+
+        meta(name='msapplication-tap-highlight' content='no')
+        meta(name='cleartype' content='on')
+        meta(name='HandheldFriendly' content='True')
+        //- Edge and some mobile browsers are very smart. Let's turn that off.
+        meta(name='format-detection', content='telephone=no')
+        meta(name='format-detection', content='date=no')
+        meta(name='format-detection', content='address=no')
+        meta(name='format-detection', content='email=no')
+        meta(content='notranslate', name='google')
+        
+        link(rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png")
+        link(rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#0B0B0B")
+        meta(name="msapplication-TileColor" content="#0B0B0B")
+        meta(name="theme-color" content="#ffffff")
+
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet")
+        link(href="./css/index.min.css" rel="stylesheet")
+  
+    body
+        #root
+            +navbar({
+                id: PageId,
+                SiteName: SiteName
+            })
+
+            section.head 
+                .container 
+                    .row
+                        .col-lg-6 
+                            .align-cols.pe-lg-5 
+                                h1.mb-5
+                                    span.heading-decoration-left We 
+                                    | will answer any 
+                                    span.text-primary question
+                                ul.icon-list.mt-5.d-none.d-lg-block
+                                    li 
+                                        .icon.icon-medium.icon_call
+                                        p.mb-0 Mon to Sat from 8am to 8pm 
+                                        a.link(href="tel:14378863078") +1 437 886 3078
+                                    li 
+                                        .icon.icon-medium.icon_message
+                                        p.mb-0 Directly on our website 
+                                        a.link(href="contact.html") Helsplav.com
+                                    li 
+                                        .icon.icon-medium.icon_sms
+                                        p.mb-0 Email address
+                                        a.link(href="mailto:contact@helpsav.com") contact@helpsav.com
+                        .col-lg-6 
+                            .align-cols 
+                                .bg-light.bg-decoration
+                                    h2 Contact form
+                                    form(action="")
+                                        .row 
+                                            .col-xxl-6.col-lg-12.col-md-6.mb-4
+                                                .form-group 
+                                                    .icon.icon-small.icon_frame
+                                                    input.form-control#firstName(type="text" name="firstName" placeholder="First name")
+                                            .col-xxl-6.col-lg-12.col-md-6.mb-4
+                                                .form-group 
+                                                    .icon.icon-small.icon_frame
+                                                    input.form-control#lastName(type="text" name="lastName" placeholder="Last name")
+                                        .form-group.mb-4
+                                            .icon.icon-small.icon_sms
+                                            input.form-control#email(type="text" name="email" placeholder="Email address")
+                                        .form-group
+                                            .icon.icon-small.icon_message
+                                            textarea.form-control#message(rows="4" type="text" name="message" placeholder="Message")
+                                        button.btn.btn-black.mt-4.mx-auto(type="submit") Send
+                                ul.icon-list.mt-5.d-lg-none
+                                    li 
+                                        .icon.icon-medium.icon_call
+                                        p.mb-0 Mon to Sat from 8am to 8pm 
+                                        a.link(href="tel:14378863078") +1 437 886 3078
+                                    li 
+                                        .icon.icon-medium.icon_message
+                                        p.mb-0 Directly on our website 
+                                        a.link(href="contact.html") Helsplav.com
+                                    li 
+                                        .icon.icon-medium.icon_sms
+                                        p.mb-0 Email address
+                                        a.link(href="mailto:contact@helpsav.com") contact@helpsav.com
+
+            section
+                .container 
+                    .row
+                        .col-lg-5.offset-lg-0.col-md-8.offset-md-2.col-10.offset-1
+                            .align-cols 
+                                .contact-1
+                                    .contact-1-decoration 
+                                    .contact-1-decoration-1 
+                                    img(src="../img/contact-1.png" srcset="../img/contact-1@2x.png" alt="")
+                        .col-lg-6.offset-lg-1.mt-5.mt-lg-0
+                            .align-cols 
+                                .pre-title FAQ
+                                h2 Helpsav Frequently 
+                                    br
+                                    | Asked 
+                                    span.text-primary Questions
+                                p However, if the question you wish to ask us is not answered on this page, we invite you to contact us directly, either by telephone on 
+                                    a(href="tel:14378863078") +1 437 886 3078
+                                    | , or by e-mail at 
+                                    a(href="mailto:contact@helpsav.com") contact@helpsav.com
+                                    | , or directly via our 
+                                    a(href="contact.html") contact page
+                                    |.
+                                p The Helpsav consultants have put together an FAQ list to help you quickly find the answers you are looking for about the services offered by Hellodocu or about our customer service platform.
+                                a.btn.btn-black(href="faq.html") Learn more
+
+            +footer({
+                id: PageId,
+                SiteName: SiteName
+            })
+                
+        script(src="./js/bundle.js", defer)

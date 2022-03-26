@@ -1,0 +1,88 @@
+.footer
+    width: 100%
+    position: relative
+    z-index: 99
+    background: $black
+    // .footer__inner
+    &__inner
+        display: flex
+        padding-top: 30px
+        padding-bottom: 30px
+    // .footer__brand
+    &__brand
+        display: flex
+        flex: 0 1 220px
+        font-weight: 600
+        font-size: 30px
+        line-height: 43px
+        color: $white
+        align-self: center
+        &::before
+            display: block
+            content: ''
+            width: 30px
+            height: 30px
+            margin: auto 15px auto -2px
+            background: center / contain no-repeat url('../img/message-text.svg')
+    // .footer__nav
+    &__nav
+        display: flex
+        gap: 50px
+        justify-content: center
+        flex: 1 0 auto
+    // .footer__item
+    &__item
+        align-self: center
+        font-size: 1rem
+        line-height: 1.5rem
+        color: $neutral
+        &.active
+            font-weight: 600
+            color: $white
+        &:hover
+            color: $white
+    // .footer__link
+    &__link
+        color: inherit
+        transition: color ease .3s
+    small
+        text-align: right
+        align-self: center
+        font-size: 1rem
+        color: $neutral
+        flex: 0 1 220px
+    @media (max-width: 1199px)
+        // .footer__nav
+        &__nav
+            gap: 32px
+    @media (max-width: 991px)
+        // .footer__brand
+        &__brand, small
+            flex: initial
+        // .footer__inner
+        &__inner
+            flex-direction: column
+            gap: 32px
+        // .footer__nav
+        &__nav
+            flex-direction: column
+            gap: 32px
+    @media (max-width: 767px)
+        // .footer__inner
+        &__inner
+            flex-direction: column
+            gap: 32px
+        // .footer__nav
+        &__nav
+            flex-direction: column
+            gap: 24px
+        // .footer__brand
+        &__brand
+            font-size: 24px
+            line-height: 32px
+            &::before
+                margin: auto 10px auto -2px
+        // .footer__inner
+        &__inner
+            padding-top: 30px
+            padding-bottom: 30px

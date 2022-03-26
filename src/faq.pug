@@ -1,0 +1,165 @@
+include ../_blocks/_all-blocks.pug
+
+block vars
+
+    - var SiteName = 'Helsplav'
+    - var PageId = 'faq'
+    - var PageTitle = SiteName + ' — Frequently Asked Questions'
+    - var PageDescription = 'Helsplav.com is a simplified, reliable and secure support for the management and cancellation of your subscriptions.'
+
+    - var LANG = 'en'
+    - var TITLE  = PageTitle
+    - var DESCRIPTION  = PageDescription
+
+    - var documentMods = ''
+
+    - var ogUrl = 'http://helsplav.com/'
+    - var ogTitle = PageTitle
+    - var ogDescription = PageDescription
+    - var ogType = 'helsplav'
+
+doctype html
+html(lang=LANG class=documentMods)
+  
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='x-ua-compatible' content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no')
+
+        title=TITLE
+        meta(name='description' content=DESCRIPTION)
+
+        meta(property='og:title' content=ogTitle)
+        meta(property='og:description' content=ogDescription)
+        meta(property='og:type' content=ogType)
+        meta(property='og:url' content=ogUrl)
+        meta(property="og:image:width" content="1200")
+        meta(property="og:image:height" content="630")
+        meta(property='og:image' content=ogUrl + 'img/og__image1200x630.jpg?' + releaseDateVer)
+        meta(property='vk:image' content=ogUrl + 'img/og__image1200x630.jpg?' + releaseDateVer)
+
+        meta(name='msapplication-tap-highlight' content='no')
+        meta(name='cleartype' content='on')
+        meta(name='HandheldFriendly' content='True')
+        //- Edge and some mobile browsers are very smart. Let's turn that off.
+        meta(name='format-detection', content='telephone=no')
+        meta(name='format-detection', content='date=no')
+        meta(name='format-detection', content='address=no')
+        meta(name='format-detection', content='email=no')
+        meta(content='notranslate', name='google')
+        
+        link(rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png")
+        link(rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#0B0B0B")
+        meta(name="msapplication-TileColor" content="#0B0B0B")
+        meta(name="theme-color" content="#ffffff")
+
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet")
+        link(href="./css/index.min.css" rel="stylesheet")
+  
+    body
+        #root
+            +navbar({
+                id: PageId,
+                SiteName: SiteName
+            })
+
+            section.head 
+                .container 
+                    .row.text-center
+                        .col
+                            h1 
+                                span.heading-decoration-left FAQ
+                    .row.mt-4
+                        .col-lg-10.offset-lg-1 
+                            #accordion
+                                .card
+                                    #headingOne.card__header
+                                        button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne")
+                                            | How do I cancel my Facil-sav subscription?
+                                            +plus-button()
+                                    #collapseOne.collapse(aria-labelledby="headingOne" data-bs-parent="#accordion")
+                                        .card__body
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .card
+                                    #headingTwo.card__header
+                                        button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                                            | Does Facil-sav secure payments?
+                                            +plus-button()
+                                    #collapseTwo.collapse.show(aria-labelledby="headingTwo" data-bs-parent="#accordion")
+                                        .card__body
+                                            p We will provide a quick and concrete response to your request. Of course, if the amount that appears on the statement is not preceded by a label mentioning facil-sav.com, it is because it is not a transaction from one of our partner sites.
+                                .card
+                                    #headingThree.card__header
+                                        button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+                                            | How do I cancel my Facil-sav subscription?
+                                            +plus-button()
+                                    #collapseThree.collapse(aria-labelledby="headingThree" data-bs-parent="#accordion")
+                                        .card__body
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .card
+                                    #headingFour.card__header
+                                        button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour")
+                                            | How do I cancel my Facil-sav subscription?
+                                            +plus-button()
+                                    #collapseFour.collapse(aria-labelledby="headingFour" data-bs-parent="#accordion")
+                                        .card__body
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                                .card
+                                    #headingFive.card__header
+                                        button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive")
+                                            | How do I cancel my Facil-sav subscription?
+                                            +plus-button()
+                                    #collapseFive.collapse(aria-labelledby="headingFive" data-bs-parent="#accordion")
+                                        .card__body
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            section
+                .container 
+                    .row 
+                        .col-lg-5.offset-lg-0.col-md-8.offset-md-2.col-10.offset-1
+                            .align-cols
+                                .faq-1
+                                    .faq-1-decoration
+                                    .faq-1-decoration-1
+                                    .faq-1-decoration-2
+                                    img(src="./img/faq-1.png" srcSet="./img/faq-1@2x.png" alt="")
+                        .col-lg-6.offset-lg-1.mt-5.mt-lg-0
+                            .align-cols
+                                .pre-title About us
+                                h2 Helpsav - site is a 
+                                    br
+                                    | Customer Service 
+                                    span.text-primary platform
+                                p That allows our customers to manage all their subscriptions taken out on our partner merchant sites at the same time, for greater simplicity and efficiency.
+                                p Cancelling one of your subscriptions with a Helpsav partner site is thus a one-click process, after having entered your e-mail address associated with this subscription. 
+                                a.btn.btn-black(href="about.html") About us
+
+            section
+                .container 
+                    .row 
+                        .col 
+                            .bg.bg-light 
+                                .pre-title Contact us
+                                h2 We will answer any question
+                                .row.mt-5
+                                    .col-lg-4
+                                        .icon.icon-medium.icon_call.mb-3
+                                        p.mb-0 Mon to Sat from 8am to 8pm 
+                                        a.link(href="tel:14378863078") +1 437 886 3078
+                                    .col-lg-4.mt-4.mt-lg-0
+                                        .icon.icon-medium.icon_message.mb-3
+                                        p.mb-0 Directly on our website 
+                                        a.link(href="https://helsplav.com") Helsplav.com
+                                    .col-lg-4.mt-4.mt-lg-0
+                                        .icon.icon-medium.icon_sms.mb-3
+                                        p.mb-0 Email address
+                                        a.link(href="mailto:contact@helsplav.com") contact@helsplav.com
+
+            +footer({
+                id: PageId,
+                SiteName: SiteName
+            })
+                
+        script(src="./js/bundle.js", defer)

@@ -1,0 +1,43 @@
+$black: #03060A;
+$white: #FFFFFF;
+
+$primary: #70B2FF;
+$primary-500: darken($primary, 10%);
+$primary-600: darken($primary, 20%);
+
+$secondary: #FFCD6B;
+$secondary-500: darken($secondary, 10%);
+$secondary-600: darken($secondary, 20%);
+
+$light: #F1F8FF;
+
+$neutral: #828991;
+
+$borderRadius: 100px;
+
+$utilities: () !default;
+$utilities: map-merge(
+  (
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values: (
+        "black": $black,
+        "primary": $primary,
+        "secondary": $secondary,
+        "white": $white
+      )
+    ),
+    "color": (
+      property: color,
+      class: text,
+      values: (
+        (
+          "black": $black,
+          "primary": $primary,
+          "secondary": $secondary,
+          "white": $white
+        )
+      )
+    ),
+  ), $utilities);

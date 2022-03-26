@@ -1,0 +1,133 @@
+body, html
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
+
+p
+    font-size: 1rem
+    line-height: 1.6rem
+    margin-bottom: 1.6rem
+    a
+        font-weight: 500
+        color: $black
+        &:hover
+            text-decoration: underline
+    &:last-child
+        margin-bottom: 0
+
+strong
+    font-weight: 600
+    font-size: 1.125rem
+    line-height: 150%
+
+small
+    font-size: .875rem
+    line-height: 150%
+
+a
+    color: inherit
+    .icon
+        margin-left: 8px
+
+.pre-title
+    font-weight: 600
+    font-size: 14px
+    line-height: 130%
+    color: $primary
+    margin-bottom: 10px
+
+.link
+    font-weight: 600
+    font-size: 1.25rem
+    line-height: 150%
+    color: $black
+    transition: color ease .3s
+    &:hover
+        color: $primary
+
+.heading-decoration-left
+    position: relative
+    &::before
+        display: block
+        content: ''
+        width: 74px
+        height: 40px
+        position: absolute
+        top: 0
+        left: 0
+        transform: translate(-60%, -60%)
+        background: center / contain no-repeat url('../img/text-decoration-left.svg')
+        z-index: -1
+
+.heading-decoration-right
+    position: relative
+    &::before
+        display: block
+        content: ''
+        width: 74px
+        height: 40px
+        position: absolute
+        top: 0
+        right: 0
+        transform: translate(60%, -60%) scaleX(-1)
+        background: center / contain no-repeat url('../img/text-decoration-left.svg')
+        z-index: -1
+  
+$h1-font-size: (xxl: 4rem, xl: 3rem, lg: 2.75rem, md: 2.5rem, sm: 2rem, xs: 2rem)
+
+h1, .h1
+  font-weight: 700
+  font-size: map-get($h1-font-size, xxl)
+  margin-bottom: calc(map-get($h1-font-size, xxl)/3)
+  line-height: 120%
+  color: $black
+  & + strong
+    font-weight: 400
+    font-size: 1.125rem
+    line-height: 180%
+    max-width: 440px
+    margin-bottom: 40px
+  @media (max-width: 1399px)
+    font-size: map-get($h1-font-size, xl)
+    margin-bottom: calc(map-get($h1-font-size, xl)/3)
+  @media (max-width: 1199px)
+    font-size: map-get($h1-font-size, lg)
+  @media (max-width: 991px)
+    font-size: map-get($h1-font-size, md)
+    margin-bottom: calc(map-get($h1-font-size, md)/3)
+  @media (max-width: 767px)
+    font-size: map-get($h1-font-size, sm)
+    margin-bottom: calc(map-get($h1-font-size, md)/3)
+  @media (max-width: 575px)
+    font-size: map-get($h1-font-size, xs)
+    margin-bottom: calc(map-get($h1-font-size, md)/3)
+  
+$h2-font-size: (xxl: 2.5rem, xl: 2.25rem, lg: 2rem, md: 1.75rem, sm: 1.5rem, xs: 1.5rem)
+
+h2, .h2
+  font-weight: 700
+  font-size: map-get($h2-font-size, xxl)
+  margin-bottom: calc(map-get($h2-font-size, xxl)/1.5)
+  line-height: 120%
+  color: $black
+  @media (max-width: 1399px)
+    font-size: map-get($h2-font-size, xl)
+    margin-bottom: calc(map-get($h2-font-size, xl)/1.5)
+  @media (max-width: 1199px)
+    font-size: map-get($h2-font-size, lg)
+  @media (max-width: 991px)
+    font-size: map-get($h2-font-size, md)
+    margin-bottom: calc(map-get($h2-font-size, md)/1.5)
+  @media (max-width: 767px)
+    font-size: map-get($h2-font-size, sm)
+    margin-bottom: calc(map-get($h2-font-size, md)/1.5)
+  @media (max-width: 575px)
+    font-size: map-get($h2-font-size, xs)
+    margin-bottom: calc(map-get($h2-font-size, md)/1.5)
+
+h3, .h3
+  font-weight: 600
+  font-size: 1.25rem
+  margin-bottom: .625rem
+  line-height: 130%
+  color: $black

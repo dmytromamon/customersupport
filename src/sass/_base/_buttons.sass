@@ -1,0 +1,42 @@
+%btn
+    display: block
+    width: intrinsic
+    width: -moz-max-content
+    width: -webkit-max-content
+    width: fit-content !important
+    border: 0 !important
+    min-width: 180px
+    padding: 18px 40px
+    border-radius: 0 32px 32px 32px
+    font-weight: 600
+    font-size: 1.125rem
+    line-height: 150%
+    position: relative
+    transition: all ease-out .2s
+
+.btn
+    @extend %btn
+    &-black
+        background: $black
+        color: $white
+        &:hover
+            background: $primary-500
+            color: $white
+        &:active, &:focus
+            background: $primary-600
+    &-primary
+        background: $primary
+        color: $white
+        &:hover
+            background: $primary-500
+            color: $white
+        &:active, &:focus
+            background: $primary-600
+    &-secondary
+        background: $secondary
+        color: $black
+        &:hover
+            background: $secondary-500
+            color: $black
+        &:active, &:focus
+            background: $secondary-600
