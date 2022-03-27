@@ -1,0 +1,39 @@
+mixin footer(args)
+    .footer
+        .container 
+            .row 
+                .col.footer__inner
+                    a.footer__brand(href='index.html')
+                        span=args.SiteName
+                    ul.footer__nav
+                        if args.id == 'index'
+                            li.footer__item.active
+                                a.footer__link(href='#') Home
+                        else
+                            li.footer__item
+                                a.footer__link(href='index.html') Home
+                        if args.id == 'about'
+                            li.footer__item.active
+                                a.footer__link(href='#') About Us
+                        else
+                            li.footer__item
+                                a.footer__link(href='about.html') About Us
+                        if args.id == 'faq'
+                            li.footer__item.active
+                                a.footer__link(href='#') FAQ
+                        else
+                            li.footer__item
+                                a.footer__link(href='faq.html') FAQ
+                        if args.id == 'cancellation'
+                            li.footer__item.active
+                                a.footer__link(href='#') Cancellation
+                        else
+                            li.footer__item
+                                a.footer__link(href='cancellation.html') Cancellation
+                        if args.id == 'contact'
+                            li.footer__item.active.mr-0
+                                a.footer__link(href='#') Contact
+                        else
+                            li.footer__item.mr-0
+                                a.footer__link(href='contact.html') Contact
+                    small © 2022  —  All rights reserved
