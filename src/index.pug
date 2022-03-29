@@ -62,7 +62,7 @@ html(lang=LANG class=documentMods)
         meta(name='msapplication-TileImage', content='/img/favicon/ms-icon-144x144.png')
         meta(name='theme-color', content='#ffffff')
 
-        link(href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet")
         link(href="./css/index.min.css" rel="stylesheet")
   
     body
@@ -72,104 +72,81 @@ html(lang=LANG class=documentMods)
                 SiteName: SiteName
             })
 
-            section.head.bg-light#decorations-1
+            section.head
                 .container 
                     .row 
-                        .col-lg-5
+                        .col-xl-5.col-lg-6
                             .align-cols
-                                h1 Feel 
-                                    span.text-primary safe 
-                                    | with 
-                                    br.d-none.d-lg-block
-                                    | Helsplav.com
+                                h1 Feel safe 
+                                    br
+                                    .d-lg-none With Helsplav.com
                                 strong Helsplav.com is a simplified, reliable and secure support for the management and cancellation of your subscriptions.
-                                .buttons-container
+                                .h1.d-none.d-lg-block With Helsplav.com
+                                .buttons-container.mt-4
                                     a.btn.btn-primary(href="cancellation.html") Cancellation
-                                    a.btn.btn-secondary(href="contact.html") Contact Us
-                        .offset-lg-1.col-lg-6.d-none.d-lg-block
+                                    a.btn.btn-secondary(href="about.html") Learn More
+                                        span.icon.icon_arrow-right
+                        .offset-xl-1.col-lg-6.d-none.d-lg-block
                             .align-cols
-                                .br-image.decoration-right
+                                .decoration.decoration-right
+                                    #shape-1
+                                    #shape-2
                                     img(src="./img/homepage-1.png" srcset="./img/homepage-1@2x.png" alt="")
 
             section 
-                .container 
-                    .row.text-center
+                .container
+                    .row
                         .col
-                            .pre-title Features
                             h2 Cancel your subscription
-                            p Our service allows you to cancel your subscription simply and instantaneously
                     .row.mt-5
-                        .col-lg-4
-                            .shape-light 
-                                .icon.icon-medium.icon_notification.mb-3
-                                h3 Cancellation
-                                p We have set up a particularly fast and efficient cancellation service at Search4manuals! Thanks to our new cancellation method.
-                        .col-lg-4.mt-4.mt-lg-0
-                            .shape-light 
-                                .icon.icon-medium.icon_profile-2user.mb-3
-                                h3 Trained teams
-                                p S4manuals teams regularly attend training courses to ensure that they remain efficient and professional. 
-                        .col-lg-4.mt-4.mt-lg-0
-                            .shape-light 
-                                .icon.icon-medium.icon_briefcase.mb-3
+                        .col-xl-3.d-none.d-xl-block
+                            #shape-3
+                        .col-xl-3.col-lg-4
+                            .shape-light.has-hover
+                                .icon.icon-big.icon_flash.mb-3
                                 h3 Efficiency
                                 p At S4manuals, we take pride in providing professional and efficient services. We believe that this is imperative when acting as a customer.
+                        .col-xl-3.col-lg-4.mt-4.mt-lg-0
+                            .shape-light.shape-absolute.has-hover
+                                .icon.icon-big.icon_star-slash.mb-3
+                                h3 Cancellation
+                                p We have set up a particularly fast and efficient cancellation service at Search4manuals! Thanks to our new cancellation method.
+                        .col-xl-3.col-lg-4.mt-4.mt-lg-0
+                            .shape-light.has-hover
+                                .icon.icon-big.icon_people.mb-3
+                                h3 Trained teams
+                                p S4manuals teams regularly attend training courses to ensure that they remain efficient and professional. 
 
-            section.bg-light#decorations-2
+            section
                 .container 
                     .row 
                         .col-lg-5.offset-lg-0.col-md-8.offset-md-2.col-10.offset-1
                             .align-cols
-                                .br-image.decoration-left
-                                    img(src="./img/homepage-2.png" srcSet="./img/homepage-2@2x.png" alt="")
+                                .decoration.decoration-left
+                                    #shape-4
+                                    img.pt-5(src="./img/homepage-2.png" srcSet="./img/homepage-2@2x.png" alt="")
                         .col-lg-6.offset-lg-1.mt-5.mt-lg-0
                             .align-cols
-                                .pre-title About us
-                                h2 Customer 
-                                    br
-                                    | Service 
-                                    span.text-primary platform
-                                p That allows our customers to manage all their subscriptions taken out on our partner merchant sites at the same time, for greater simplicity and efficiency.
-                                p Cancelling one of your subscriptions with a Helpsav partner site is thus a one-click process, after having entered your e-mail address associated with this subscription. 
-                                a.btn.btn-primary(href="about.html") About us
+                                h2.col-9.col-sm-8.col-lg-12 Helpsav - site is a Customer Service platform
+                                p That allows our customers to 
+                                    b manage all their subscriptions 
+                                    | taken out on our partner merchant sites at the same time, for greater simplicity and efficiency.
+                                p Cancelling one of your subscriptions with a Helpsav partner site is 
+                                    b thus a one-click process
+                                    | , after having entered your e-mail address associated with this subscription. 
+                                a.btn.btn-secondary(href="about.html") Learn more
+                                    span.icon.icon_arrow-right
 
             section
-                .container 
-                    .row.text-center
-                        .col 
-                            .shape-primary
-                                .pre-title Contact us
-                                h2 We will answer any question
-                                .row.mt-5
-                                    .col-lg-4
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_call.mb-3
-                                                p.mb-1 Mon to Sat from 8am to 8pm 
-                                                a.link(href="tel:14378863078") +1 437 886 3078
-                                    .col-lg-4.mt-4.mt-lg-0
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_message.mb-3
-                                                p.mb-1 Directly on our website 
-                                                a.link(href="https://helsplav.com") Helsplav.com
-                                    .col-lg-4.mt-4.mt-lg-0
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_sms.mb-3
-                                                p.mb-1 Email address
-                                                a.link(href="mailto:contact@helsplav.com") contact@helsplav.com
-
-            section.bg-light#decorations-3
                 .container 
                     .row.row-reverse-lg
                         .col-lg-5.offset-lg-1.col-md-8.offset-md-2.col-10.offset-1
                             .align-cols 
-                                .br-image.decoration-right
+                                .decoration.decoration-right
+                                    #shape-5
                                     img(src="./img/homepage-3.png" srcset="./img/homepage-3@2x.png" alt="")
                         .col-lg-6.mt-5.mt-lg-0
                             .align-cols 
-                                .pre-title FAQ
                                 h2 Helpsav Frequently 
                                     br
                                     | Asked Questions
@@ -181,7 +158,36 @@ html(lang=LANG class=documentMods)
                                     a(href="contact.html") contact page
                                     |.
                                 p The Helpsav consultants have put together an FAQ list to help you quickly find the answers you are looking for about the services offered by Hellodocu or about our customer service platform.
-                                a.btn.btn-primary(href="faq.html") Learn more
+                                a.btn.btn-secondary(href="faq.html") Learn more
+                                    span.icon.icon_arrow-right
+
+            section
+                .container 
+                    .row
+                        .col-lg-7
+                            .shape-black.py-5
+                                .row 
+                                    .col-lg-7
+                                        h2 We will answer any question
+                                        a.btn.btn-primary.mt-4(href="contact.html") Contact Us
+                                    .col-lg-5.d-none.d-lg-block
+                                        #shape-6
+                        .col-lg-5.mt-5.mt-lg-0
+                            .shape-light
+                                .align-cols
+                                    ul.icon-list
+                                        li
+                                            .icon.icon-big.icon_call.mb-3
+                                            p.mb-1 Mon to Sat from 8am to 8pm 
+                                            a.link(href="tel:14378863078") +1 437 886 3078
+                                        li
+                                            .icon.icon-big.icon_message-text.mb-3
+                                            p.mb-1 Directly on our website 
+                                            a.link(href="https://helsplav.com") Helsplav.com
+                                        li
+                                            .icon.icon-big.icon_sms.mb-3
+                                            p.mb-1 Email address
+                                            a.link(href="mailto:contact@helsplav.com") contact@helsplav.com
 
             +footer({
                 id: PageId,

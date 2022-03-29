@@ -1,13 +1,15 @@
-$black: #222222;
+$black: #160404;
 $white: #FFFFFF;
 
-$primary: #FF8540;
+$primary: #DF534E;
 $primary-500: darken($primary, 10%);
 $primary-600: darken($primary, 20%);
 
+$primary-200: #EFABA9;
+
 $light: #FAFAFA; 
 
-$neutral: #999999;
+$neutral: #4D4D4D;
 
 $utilities: () !default;
 $utilities: map-merge(

@@ -62,7 +62,7 @@ html(lang=LANG class=documentMods)
         meta(name='msapplication-TileImage', content='/img/favicon/ms-icon-144x144.png')
         meta(name='theme-color', content='#ffffff')
 
-        link(href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet")
         link(href="./css/index.min.css" rel="stylesheet")
 
     body
@@ -72,87 +72,69 @@ html(lang=LANG class=documentMods)
                 SiteName: SiteName
             })
 
-            section.head.bg-light#decorations-4
+            section.head
                 .container 
                     .row.text-center
                         .col
                             h1 Contact form
                     .row.mt-5
-                        .col-xxl-8.offset-xxl-2.col-lg-10.offset-lg-1
-                            form(action="")
+                        .col-xxl-6.offset-xxl-3.col-lg-8.offset-lg-2
+                            form(action="")#contact
                                 .row 
-                                    .col-lg-6.mb-4
+                                    .col-xl-6.col-lg-12.col-md-6.mb-4
                                         .form-group 
-                                            .icon.icon-small.icon_frame-neutral
+                                            .icon.icon-small.icon_frame
                                             input.form-control#firstName(type="text" name="firstName" placeholder="First name")
+                                    .col-xl-6.col-lg-12.col-md-6.mb-4
                                         .form-group 
-                                            .icon.icon-small.icon_frame-neutral
+                                            .icon.icon-small.icon_frame
                                             input.form-control#lastName(type="text" name="lastName" placeholder="Last name")
+                                    .col-xl-6.col-lg-12.col-md-6.mb-4
                                         .form-group
-                                            .icon.icon-small.icon_sms-neutral
+                                            .icon.icon-small.icon_sms
                                             input.form-control#email(type="text" name="email" placeholder="Email address")
+                                    .col-xl-6.col-lg-12.col-md-6.mb-4
                                         .form-group
-                                            .icon.icon-small.icon_document-text-neutral
+                                            .icon.icon-small.icon_document
                                             input.form-control#subject(type="text" name="subject" placeholder="Subject")
-                                    .col-lg-6.mb-4
-                                        .form-group.h-100
-                                            .icon.icon-small.icon_message-neutral
-                                            textarea.form-control#message(rows="4" type="text" name="message" placeholder="Message")
+                                .form-group
+                                    .icon.icon-small.icon_message
+                                    textarea.form-control#message(rows="2" type="text" name="message" placeholder="Message")
                                 button.btn.btn-primary.mt-4.mx-auto(type="submit") Send
 
             section
                 .container 
-                    .row.text-center
-                        .col 
-                            .shape-primary
-                                .pre-title Contact us
-                                h2 We will answer any question
-                                .row.mt-5
-                                    .col-lg-4
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_call.mb-3
-                                                p.mb-1 Mon to Sat from 8am to 8pm 
-                                                a.link(href="tel:14378863078") +1 437 886 3078
-                                    .col-lg-4.mt-4.mt-lg-0
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_message.mb-3
-                                                p.mb-1 Directly on our website 
-                                                a.link(href="https://helsplav.com") Helsplav.com
-                                    .col-lg-4.mt-4.mt-lg-0
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_sms.mb-3
-                                                p.mb-1 Email address
-                                                a.link(href="mailto:contact@helsplav.com") contact@helsplav.com
-
-            section.bg-light#decorations-3
-                .container 
-                    .row.row-reverse-lg
-                        .col-lg-5.offset-lg-1.col-md-8.offset-md-2.col-10.offset-1
-                            .align-cols 
-                                .br-image.decoration-right
-                                    img(src="./img/contact-1.png" srcset="./img/contact-1@2x.png" alt="")
-                        .col-lg-6.mt-5.mt-lg-0
-                            .align-cols 
-                                .pre-title FAQ
-                                h2 Helpsav Frequently 
-                                    br
-                                    | Asked Questions
-                                p However, if the question you wish to ask us is not answered on this page, we invite you to contact us directly, either by telephone on 
-                                    a(href="tel:14378863078") +1 437 886 3078
-                                    | , or by e-mail at 
-                                    a(href="mailto:contact@helpsav.com") contact@helpsav.com
-                                    | , or directly via our 
-                                    a(href="contact.html") contact page
-                                    |.
-                                p The Helpsav consultants have put together an FAQ list to help you quickly find the answers you are looking for about the services offered by Hellodocu or about our customer service platform.
-                                a.btn.btn-primary(href="faq.html") Learn more
+                    .row
+                        .col-lg-7
+                            .shape-black.py-5
+                                .row 
+                                    .col-lg-7
+                                        h2 We will answer any question
+                                    .col-lg-5.d-none.d-lg-block
+                                        #shape-6.w-100
+                                .row 
+                                    .col.mt-4
+                                        p That allows our customers to manage all their subscriptions taken out on our partner merchant sites at the same time, for greater simplicity and efficiency.
+                        .col-lg-5.mt-5.mt-lg-0
+                            .shape-light
+                                .align-cols
+                                    ul.icon-list
+                                        li
+                                            .icon.icon-big.icon_call.mb-3
+                                            p.mb-1 Mon to Sat from 8am to 8pm 
+                                            a.link(href="tel:14378863078") +1 437 886 3078
+                                        li
+                                            .icon.icon-big.icon_message-text.mb-3
+                                            p.mb-1 Directly on our website 
+                                            a.link(href="https://helsplav.com") Helsplav.com
+                                        li
+                                            .icon.icon-big.icon_sms.mb-3
+                                            p.mb-1 Email address
+                                            a.link(href="mailto:contact@helsplav.com") contact@helsplav.com
 
             +footer({
                 id: PageId,
                 SiteName: SiteName
             })
-
+                
         script(src="./js/bundle.js", defer)

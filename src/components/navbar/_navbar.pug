@@ -6,12 +6,6 @@ mixin navbar(args)
                     a.navbar__brand(href='index.html')
                         span=args.SiteName
                     ul.navbar__nav
-                        if args.id == 'index'
-                            li.navbar__item.active
-                                a.navbar__link(href='#') Home
-                        else
-                            li.navbar__item
-                                a.navbar__link(href='index.html') Home
                         if args.id == 'about'
                             li.navbar__item.active
                                 a.navbar__link(href='#') About Us

@@ -1,5 +1,8 @@
 import { gsap } from "gsap"
+import jQuery from 'jquery'
 import bootstrap from 'bootstrap'
+
+window.$ = window.jQuery = jQuery
 
 let navbar = 'hidden'
 document.querySelector('.navbar__toggler').onclick = function() {
@@ -25,3 +28,7 @@ document.querySelector('.navbar__toggler').onclick = function() {
         navbar = 'hidden'
     }
 }
+
+$(document).on("click", "#accordion .card button", function (t) {
+    t.preventDefault(), $(this).closest(".card").hasClass("active") ? $(".card").removeClass("active") : ($(".card").removeClass("active"), $(this).closest(".card").addClass("active"))
+});

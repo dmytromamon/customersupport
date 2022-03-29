@@ -1,17 +1,17 @@
 section
-  margin: 100px 0
+  margin: 144px 0
   position: relative
   @media (max-width: 767px)
-    margin: 48px 0
+    margin: 64px 0
 
 section.bg-light
   background: $light
   margin: 0
-  padding: 100px 0
+  padding: 144px 0
   position: relative
   @media (max-width: 767px)
     margin: 0
-    padding: 48px 0
+    padding: 64px 0
 
 .align-cols
   height: 100%
@@ -41,53 +41,86 @@ section.bg-light
     margin: 0
     padding: 32px 0 64px
 
-.shape-light
-  background: $light
-  border-radius: 30px
-  padding: 40px
+.shape-black
+  background: $black
+  color: $white
+  border-radius: 20px
+  padding: 32px
   position: relative
   z-index: 2
   height: 100%
-  @media (max-width: 991px)
-    padding: 32px
-  @media (max-width: 575px)
-    padding: 20px
+  h1, h2, h3, p
+    color: inherit
 
-.shape-primary
-  background: $primary
-  border-radius: 30px
-  padding: 80px
-  color: $white
+.shape-light
+  background: $light
+  border-radius: 20px
+  padding: 32px
   position: relative
-  overflow: hidden
   z-index: 2
-  .pre-title, h1, h2, h3, p, a
-    color: $white
-  a:hover
-    color: $light
-  &::after
-      display: block
-      content: ''
-      width: 150px
-      height: 150px
-      position: absolute
-      top: 0
-      right: 0
-      transform: translate(10%, -20%)
-      z-index: -1
-      background: center / contain no-repeat url('../img/decoration-black.svg')
-  @media (max-width: 1199px)
-    padding: 40px
+  height: 100%
+  &.has-hover
+    transition: all ease .3s
+    &:hover
+      background: $primary
+      color: $white
+      h1, h2, h3, p
+        color: inherit
+      .icon
+          &_flash
+              &::after
+                  background: center / contain no-repeat url('../img/flash-white.svg')
+          &_star-slash
+              &::after
+                  background: center / contain no-repeat url('../img/star-slash-white.svg')
+          &_people
+              &::after
+                  background: center / contain no-repeat url('../img/people-white.svg')
+  @media (max-width: 991px)
+    padding: 24px
   @media (max-width: 575px)
-    padding: 32px
-    &::after
-      width: 75px
-      height: 75px
+    padding: 16px
+
+.shape-absolute
+  margin-top: -7.4rem
+  @media (max-width: 1199px)
+    margin-top: 0
+
+// .shape-primary
+//   background: $primary
+//   border-radius: 30px
+//   padding: 80px
+//   color: $white
+//   position: relative
+//   overflow: hidden
+//   z-index: 2
+//   .pre-title, h1, h2, h3, p, a
+//     color: $white
+//   a:hover
+//     color: $light
+//   &::after
+//       display: block
+//       content: ''
+//       width: 150px
+//       height: 150px
+//       position: absolute
+//       top: 0
+//       right: 0
+//       transform: translate(10%, -20%)
+//       z-index: -1
+//       background: center / contain no-repeat url('../img/decoration-black.svg')
+//   @media (max-width: 1199px)
+//     padding: 40px
+//   @media (max-width: 575px)
+//     padding: 32px
+//     &::after
+//       width: 75px
+//       height: 75px
 
 .buttons-container
   display: flex
   flex-wrap: wrap
-  gap: 20px
+  gap: 32px
 
 ul.icon-list
   li

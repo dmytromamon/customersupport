@@ -1,8 +1,18 @@
 .footer
     width: 100%
     position: relative
-    z-index: 99
     background: $black
+    &::after
+        display: block
+        content: ''
+        position: absolute
+        bottom: 100%
+        right: 5vw
+        width: 12.5vw
+        height: 12.5vw
+        background: center / contain no-repeat url('../img/shape-9.svg')
+        z-index: 2
+        pointer-events: none
     // .footer__inner
     &__inner
         display: flex
@@ -11,7 +21,7 @@
     // .footer__brand
     &__brand
         display: flex
-        flex: 0 1 220px
+        flex: 0 1 240px
         font-weight: 600
         font-size: 30px
         line-height: 43px
@@ -23,7 +33,7 @@
             width: 30px
             height: 30px
             margin: auto 15px auto -2px
-            background: center / contain no-repeat url('../img/firefill.svg')
+            background: center / contain no-repeat url('../img/message-text.svg')
     // .footer__nav
     &__nav
         display: flex
@@ -33,11 +43,12 @@
     // .footer__item
     &__item
         align-self: center
+        font-weight: 300
         font-size: 1rem
         line-height: 1.5rem
-        color: $neutral
+        color: $white
         &.active
-            font-weight: 600
+            font-weight: 400
             color: $white
         &:hover
             color: $white
@@ -49,8 +60,8 @@
         text-align: right
         align-self: center
         font-size: 1rem
-        color: $neutral
-        flex: 0 1 220px
+        color: $white
+        flex: 0 1 240px
     @media (max-width: 1199px)
         // .footer__nav
         &__nav

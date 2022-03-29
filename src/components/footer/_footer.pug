@@ -6,12 +6,6 @@ mixin footer(args)
                     a.footer__brand(href='index.html')
                         span=args.SiteName
                     ul.footer__nav
-                        if args.id == 'index'
-                            li.footer__item.active
-                                a.footer__link(href='#') Home
-                        else
-                            li.footer__item
-                                a.footer__link(href='index.html') Home
                         if args.id == 'about'
                             li.footer__item.active
                                 a.footer__link(href='#') About Us

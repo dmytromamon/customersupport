@@ -10,7 +10,7 @@
   border-radius: 0
   position: relative
   padding: 29px 34px
-  background: $white
+  background: $light
   border-radius: 15px
   margin-bottom: 20px
   transition: all ease-out .2s
@@ -18,10 +18,15 @@
     margin-bottom: 0
   &__header
     position: relative
+  &.active
+    background: $primary
+    button, p, b, a 
+      color: $white !important
 
   button
     padding: 0 128px 0 0
-    font-weight: 600
+    font-family: 'Sora', sans-serif
+    font-weight: 500
     font-size: 1.25rem
     line-height: 150%
     color: $black
@@ -36,11 +41,10 @@
       position: absolute
       top: 2px
       right: 0
-      transform: scale(1.2)
       transform-origin: center center
       transition: all ease .3s
       path
-        stroke: $black
+        fill: $primary
         transition: fill ease .3s
 
     &:active, &:focus, &:hover
@@ -50,9 +54,9 @@
     &[aria-expanded=true]   
       color: $primary   
       svg
-        transform: rotate(135deg) scale(1.2)
+        transform: rotate(180deg)
         path
-          stroke: $neutral
+          fill: $white
 
 .card__body
   background: 0 0

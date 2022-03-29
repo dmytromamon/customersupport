@@ -62,7 +62,7 @@ html(lang=LANG class=documentMods)
         meta(name='msapplication-TileImage', content='/img/favicon/ms-icon-144x144.png')
         meta(name='theme-color', content='#ffffff')
 
-        link(href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet")
         link(href="./css/index.min.css" rel="stylesheet")
   
     body
@@ -72,14 +72,15 @@ html(lang=LANG class=documentMods)
                 SiteName: SiteName
             })
 
-            section.head.bg-light#decorations-4
+            section.head
                 .container 
                     .row.text-center
                         .col
-                            h1 
-                                span.heading-decoration-left FAQ
+                            h1 FAQ
                     .row.mt-4
-                        .col-lg-10.offset-lg-1 
+                        .col-lg-2
+                            #shape-7.mt-4
+                        .col-lg-8
                             #accordion
                                 .card
                                     #headingOne.card__header
@@ -89,7 +90,7 @@ html(lang=LANG class=documentMods)
                                     #collapseOne.collapse(aria-labelledby="headingOne" data-bs-parent="#accordion")
                                         .card__body
                                             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                .card
+                                .card.active
                                     #headingTwo.card__header
                                         button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo")
                                             | Does Facil-sav secure payments?
@@ -124,48 +125,53 @@ html(lang=LANG class=documentMods)
 
             section
                 .container 
-                    .row.text-center
-                        .col 
-                            .shape-primary
-                                .pre-title Contact us
-                                h2 We will answer any question
-                                .row.mt-5
-                                    .col-lg-4
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_call.mb-3
-                                                p.mb-1 Mon to Sat from 8am to 8pm 
-                                                a.link(href="tel:14378863078") +1 437 886 3078
-                                    .col-lg-4.mt-4.mt-lg-0
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_message.mb-3
-                                                p.mb-1 Directly on our website 
-                                                a.link(href="https://helsplav.com") Helsplav.com
-                                    .col-lg-4.mt-4.mt-lg-0
-                                        ul.icon-list
-                                            li
-                                                .icon.icon-big.icon_sms.mb-3
-                                                p.mb-1 Email address
-                                                a.link(href="mailto:contact@helsplav.com") contact@helsplav.com
-
-            section.bg-light#decorations-2
-                .container 
-                    .row 
-                        .col-lg-5.offset-lg-0.col-md-8.offset-md-2.col-10.offset-1
-                            .align-cols
-                                .br-image.decoration-left
-                                    img(src="./img/faq-1.png" srcSet="./img/faq-1@2x.png" alt="")
-                        .col-lg-6.offset-lg-1.mt-5.mt-lg-0
-                            .align-cols
-                                .pre-title About us
-                                h2 Customer 
+                    .row.row-reverse-lg
+                        .col-lg-5.offset-lg-1.col-md-8.offset-md-2.col-10.offset-1
+                            .align-cols 
+                                .decoration.decoration-right
+                                    #shape-8
+                                    img.pt-4(src="./img/faq-1.png" srcset="./img/faq-1@2x.png" alt="")
+                        .col-lg-6.mt-5.mt-lg-0
+                            .align-cols 
+                                h2 Helpsav Frequently 
                                     br
-                                    | Service 
-                                    span.text-primary platform
-                                p That allows our customers to manage all their subscriptions taken out on our partner merchant sites at the same time, for greater simplicity and efficiency.
-                                p Cancelling one of your subscriptions with a Helpsav partner site is thus a one-click process, after having entered your e-mail address associated with this subscription. 
-                                a.btn.btn-primary(href="about.html") About us
+                                    | Asked Questions
+                                p However, if the question you wish to ask us is not answered on this page, we invite you to contact us directly, either by telephone on 
+                                    a(href="tel:14378863078") +1 437 886 3078
+                                    | , or by e-mail at 
+                                    a(href="mailto:contact@helpsav.com") contact@helpsav.com
+                                    | , or directly via our 
+                                    a(href="contact.html") contact page
+                                    |.
+                                p The Helpsav consultants have put together an FAQ list to help you quickly find the answers you are looking for about the services offered by Hellodocu or about our customer service platform.
+
+            section
+                .container 
+                    .row
+                        .col-lg-7
+                            .shape-black.py-5
+                                .row 
+                                    .col-lg-7
+                                        h2 We will answer any question
+                                        a.btn.btn-primary.mt-4(href="contact.html") Contact Us
+                                    .col-lg-5.d-none.d-lg-block
+                                        #shape-6
+                        .col-lg-5.mt-5.mt-lg-0
+                            .shape-light
+                                .align-cols
+                                    ul.icon-list
+                                        li
+                                            .icon.icon-big.icon_call.mb-3
+                                            p.mb-1 Mon to Sat from 8am to 8pm 
+                                            a.link(href="tel:14378863078") +1 437 886 3078
+                                        li
+                                            .icon.icon-big.icon_message-text.mb-3
+                                            p.mb-1 Directly on our website 
+                                            a.link(href="https://helsplav.com") Helsplav.com
+                                        li
+                                            .icon.icon-big.icon_sms.mb-3
+                                            p.mb-1 Email address
+                                            a.link(href="mailto:contact@helsplav.com") contact@helsplav.com
 
             +footer({
                 id: PageId,
