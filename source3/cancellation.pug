@@ -1,0 +1,172 @@
+include ../_blocks/_all-blocks.pug
+
+block vars
+
+    - var SiteName = 'Helsplav'
+    - var PageId = 'cancellation'
+    - var PageTitle = SiteName + ' — Cancellation'
+    - var PageDescription = 'Helsplav.com is a simplified, reliable and secure support for the management and cancellation of your subscriptions.'
+
+    - var LANG = 'en'
+    - var TITLE  = PageTitle
+    - var DESCRIPTION  = PageDescription
+
+    - var documentMods = ''
+
+    - var ogUrl = 'http://helsplav.com/'
+    - var ogTitle = PageTitle
+    - var ogDescription = PageDescription
+    - var ogType = 'helsplav'
+
+doctype html
+html(lang=LANG class=documentMods)
+
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='x-ua-compatible' content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        
+        title=TITLE
+        meta(name='description' content=DESCRIPTION)
+        
+        meta(property='og:title' content=ogTitle)
+        meta(property='og:description' content=ogDescription)
+        meta(property='og:type' content=ogType)
+        meta(property='og:url' content=ogUrl)
+    
+        meta(name='msapplication-tap-highlight' content='no')
+        meta(name='cleartype' content='on')
+        meta(name='HandheldFriendly' content='True')
+        //- Edge and some mobile browsers are very smart. Let's turn off that.
+        meta(name='format-detection', content='telephone=no')
+        meta(name='format-detection', content='date=no')
+        meta(name='format-detection', content='address=no')
+        meta(name='format-detection', content='email=no')
+        meta(content='notranslate', name='google')
+        
+        link(rel='apple-touch-icon', sizes='57x57', href='./img/favicon/apple-icon-57x57.png')
+        link(rel='apple-touch-icon', sizes='60x60', href='./img/favicon/apple-icon-60x60.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='./img/favicon/apple-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='76x76', href='./img/favicon/apple-icon-76x76.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='./img/favicon/apple-icon-114x114.png')
+        link(rel='apple-touch-icon', sizes='120x120', href='./img/favicon/apple-icon-120x120.png')
+        link(rel='apple-touch-icon', sizes='144x144', href='./img/favicon/apple-icon-144x144.png')
+        link(rel='apple-touch-icon', sizes='152x152', href='./img/favicon/apple-icon-152x152.png')
+        link(rel='apple-touch-icon', sizes='180x180', href='./img/favicon/apple-icon-180x180.png')
+        link(rel='icon', type='image/png', sizes='192x192', href='./img/favicon/android-icon-192x192.png')
+        link(rel='icon', type='image/png', sizes='32x32', href='./img/favicon/favicon-32x32.png')
+        link(rel='icon', type='image/png', sizes='96x96', href='./img/favicon/favicon-96x96.png')
+        link(rel='icon', type='image/png', sizes='16x16', href='./img/favicon/favicon-16x16.png')
+        link(rel='manifest', href='./img/favicon/manifest.json')
+        meta(name='msapplication-TileColor', content='#ffffff')
+        meta(name='msapplication-TileImage', content='/img/favicon/ms-icon-144x144.png')
+        meta(name='theme-color', content='#ffffff')
+
+        link(href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet")
+        link(href="./css/index.min.css" rel="stylesheet")
+  
+    body
+        #root
+            +navbar({
+                id: PageId,
+                SiteName: SiteName
+            })
+
+            section.head
+                .container 
+                    .row.text-center
+                        .col
+                            h1 Helpsav - site is a 
+                                br
+                                | Customer Service platform
+                            strong No problem, just fill in the email address you used when you subscribed!
+                    .row.mt-5
+                        .col-lg-8.offset-lg-2.col-xxl-6.offset-xxl-3
+                            form(action="")#unsubscribe
+                                .form-group 
+                                    .icon.icon_sms
+                                    input.form-control#email(type="text" name="email" placeholder="Email address")
+                                button.btn.btn-primary(type="submit") Unsubscribe
+
+            section 
+                .container
+                    .row
+                        .col
+                            h2 Cancel your subscription
+                    .row.mt-5
+                        .col-xl-3.d-none.d-xl-block
+                            #shape-3
+                        .col-xl-3.col-lg-4
+                            .shape-light.has-hover
+                                .icon.icon-big.icon_flash.mb-3
+                                h3 Efficiency
+                                p At S4manuals, we take pride in providing professional and efficient services. We believe that this is imperative when acting as a customer.
+                        .col-xl-3.col-lg-4.mt-4.mt-lg-0
+                            .shape-light.shape-absolute.has-hover
+                                .icon.icon-big.icon_star-slash.mb-3
+                                h3 Cancellation
+                                p We have set up a particularly fast and efficient cancellation service at Search4manuals! Thanks to our new cancellation method.
+                        .col-xl-3.col-lg-4.mt-4.mt-lg-0
+                            .shape-light.has-hover
+                                .icon.icon-big.icon_people.mb-3
+                                h3 Trained teams
+                                p S4manuals teams regularly attend training courses to ensure that they remain efficient and professional. 
+
+            section
+                .container 
+                    .row.row-reverse-lg
+                        .col-lg-5.offset-lg-1.col-md-8.offset-md-2.col-10.offset-1
+                            .align-cols 
+                                .decoration.decoration-right
+                                    #shape-5
+                                    img.pt-4(src="./img/cancellation-1.png" srcset="./img/cancellation-1@2x.png" alt="")
+                        .col-lg-6.mt-5.mt-lg-0
+                            .align-cols 
+                                h2 Helpsav Frequently 
+                                    br
+                                    | Asked Questions
+                                p However, if the question you wish to ask us is not answered on this page, we invite you to contact us directly, either by telephone on 
+                                    a(href="tel:14378863078") +1 437 886 3078
+                                    | , or by e-mail at 
+                                    a(href="mailto:contact@helpsav.com") contact@helpsav.com
+                                    | , or directly via our 
+                                    a(href="contact.html") contact page
+                                    |.
+                                p The Helpsav consultants have put together an FAQ list to help you quickly find the answers you are looking for about the services offered by Hellodocu or about our customer service platform.
+                                a.btn.btn-secondary(href="faq.html") Learn more
+                                    span.icon.icon_arrow-right
+
+            section
+                .container 
+                    .row
+                        .col-lg-7
+                            .shape-black.py-5
+                                .row 
+                                    .col-lg-7
+                                        h2 We will answer any question
+                                        a.btn.btn-primary.mt-4(href="contact.html") Contact Us
+                                    .col-lg-5.d-none.d-lg-block
+                                        #shape-6
+                        .col-lg-5.mt-5.mt-lg-0
+                            .shape-light
+                                .align-cols
+                                    ul.icon-list
+                                        li
+                                            .icon.icon-big.icon_call.mb-3
+                                            p.mb-1 Mon to Sat from 8am to 8pm 
+                                            a.link(href="tel:14378863078") +1 437 886 3078
+                                        li
+                                            .icon.icon-big.icon_message-text.mb-3
+                                            p.mb-1 Directly on our website 
+                                            a.link(href="https://helsplav.com") Helsplav.com
+                                        li
+                                            .icon.icon-big.icon_sms.mb-3
+                                            p.mb-1 Email address
+                                            a.link(href="mailto:contact@helsplav.com") contact@helsplav.com
+
+            +footer({
+                id: PageId,
+                SiteName: SiteName
+            })
+                
+        script(src="./js/bundle.js", defer)

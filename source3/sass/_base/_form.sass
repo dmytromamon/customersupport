@@ -1,0 +1,95 @@
+.form-control
+    padding: 30px 30px 30px 72px
+    font-family: 'Sora', sans-serif
+    font-weight: 400
+    font-size: 1.125rem
+    line-height: 160%
+    color: $black !important
+    border: 0 !important
+    transition: all ease .2s
+    background: $light
+    border-radius: 50px
+    outline: none !important
+    box-shadow: none !important
+    width: 100%
+    &::placeholder
+        color: $neutral !important
+    &:active, &:focus
+        box-shadow: 0 0 2px rgba($primary, .2)
+    @media (max-width: 575px)
+        padding: 20px 56px
+
+.form-group
+    position: relative
+    width: 100% !important
+    textarea
+        height: 100%
+    button
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+    & + .form-group
+        margin-top: 24px
+    .icon
+        width: 24px
+        height: 24px
+        position: absolute
+        top: 32px
+        left: 36px
+        background: 0 0
+        box-shadow: none
+    @media (max-width: 575px)
+        .icon
+            width: 18px
+            height: 18px
+            top: 24px
+            left: 30px
+
+form
+    a
+        color: $primary
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+    .btn
+        min-width: 220px !important
+
+#contact
+    position: relative
+    &::after
+        display: block
+        content: ''
+        width: 50%
+        height: 50%
+        position: absolute
+        bottom: 0
+        left: -40%
+        background: center / contain no-repeat url('../img/shape-10.svg')
+        z-index: -1 
+        pointer-events: none
+
+#unsubscribe
+    position: relative
+    .form-group
+        .icon
+            top: 27px
+            left: 36px
+            width: 28px
+            height: 28px
+    .form-control
+        width: 100%
+        background: $light
+        padding: 30px 30px 30px 82px
+        border-radius: 50px
+    button
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        border-radius: 0 50px 50px 0
+    @media (max-width: 575px)
+        button
+            position: relative
+            margin: 20px auto 0
+            border-radius: 50px

@@ -1,0 +1,48 @@
+mixin navbar(args)
+    nav.navbar
+        .container 
+            .row 
+                .col.navbar__inner
+                    a.navbar__brand(href='index.html')
+                        span=args.SiteName
+                    ul.navbar__nav
+                        if args.id == 'about'
+                            li.navbar__item.active
+                                a.navbar__link(href='#') About Us
+                        else
+                            li.navbar__item
+                                a.navbar__link(href='about.html') About Us
+                        if args.id == 'faq'
+                            li.navbar__item.active
+                                a.navbar__link(href='#') FAQ
+                        else
+                            li.navbar__item
+                                a.navbar__link(href='faq.html') FAQ
+                        if args.id == 'cancellation'
+                            li.navbar__item.active
+                                a.navbar__link(href='#') Cancellation
+                        else
+                            li.navbar__item
+                                a.navbar__link(href='cancellation.html') Cancellation
+                        if args.id == 'contact'
+                            li.navbar__item.active.mr-0
+                                a.navbar__link(href='#') Contact
+                        else
+                            li.navbar__item.mr-0
+                                a.navbar__link(href='contact.html') Contact
+                        .navbar__contact.d-md-none
+                            strong
+                                a(href="tel:14378863078") +1 437 886 3078
+                            small
+                                a(href="mailto:contact@s4manuals.com")  contact@s4manuals.com
+                    .navbar__contact.d-none.d-md-block
+                        strong
+                            a(href="tel:14378863078") +1 437 886 3078
+                        small
+                            a(href="mailto:contact@s4manuals.com")  contact@s4manuals.com
+                    .navbar__toggler
+                        svg(xmlns='http://www.w3.org/2000/svg', width='24', height='14', viewBox='0 0 24 14')
+                            g(fill='#FFFFFF')
+                                path(d='M0 0h24v2H0z')
+                                path(d='M0 6h24v2H0z')
+                                path(d='M0 12h24v2H0z')

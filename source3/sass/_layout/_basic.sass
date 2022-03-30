@@ -1,0 +1,173 @@
+section
+  margin: 144px 0
+  position: relative
+  @media (max-width: 767px)
+    margin: 64px 0
+
+section.bg-light
+  background: $light
+  margin: 0
+  padding: 144px 0
+  position: relative
+  @media (max-width: 767px)
+    margin: 0
+    padding: 64px 0
+
+.align-cols
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  .row
+    flex: initial
+
+.head
+  margin-top: 64px
+  position: relative
+  @media (max-width: 1199px)
+    margin-top: 48px
+  @media (max-width: 991px)
+    margin-top: 32px
+
+.head.bg-light
+  background: $light
+  margin: 0
+  padding: 64px 0 100px
+  position: relative
+  @media (max-width: 1199px)
+    margin: 0
+    padding: 48px 0 64px
+  @media (max-width: 991px)
+    margin: 0
+    padding: 32px 0 64px
+
+.shape-black
+  background: $black
+  color: $white
+  border-radius: 20px
+  padding: 32px
+  position: relative
+  z-index: 2
+  height: 100%
+  h1, h2, h3, p
+    color: inherit
+
+.shape-light
+  background: $light
+  border-radius: 20px
+  padding: 32px
+  position: relative
+  z-index: 2
+  height: 100%
+  &.has-hover
+    transition: all ease .3s
+    &:hover
+      background: $primary
+      color: $white
+      h1, h2, h3, p
+        color: inherit
+      .icon
+          &_flash
+              &::after
+                  background: center / contain no-repeat url('../img/flash-white.svg')
+          &_star-slash
+              &::after
+                  background: center / contain no-repeat url('../img/star-slash-white.svg')
+          &_people
+              &::after
+                  background: center / contain no-repeat url('../img/people-white.svg')
+  @media (max-width: 991px)
+    padding: 24px
+  @media (max-width: 575px)
+    padding: 16px
+
+.shape-absolute
+  margin-top: -7.4rem
+  @media (max-width: 1199px)
+    margin-top: 0
+
+// .shape-primary
+//   background: $primary
+//   border-radius: 30px
+//   padding: 80px
+//   color: $white
+//   position: relative
+//   overflow: hidden
+//   z-index: 2
+//   .pre-title, h1, h2, h3, p, a
+//     color: $white
+//   a:hover
+//     color: $light
+//   &::after
+//       display: block
+//       content: ''
+//       width: 150px
+//       height: 150px
+//       position: absolute
+//       top: 0
+//       right: 0
+//       transform: translate(10%, -20%)
+//       z-index: -1
+//       background: center / contain no-repeat url('../img/decoration-black.svg')
+//   @media (max-width: 1199px)
+//     padding: 40px
+//   @media (max-width: 575px)
+//     padding: 32px
+//     &::after
+//       width: 75px
+//       height: 75px
+
+.buttons-container
+  display: flex
+  flex-wrap: wrap
+  gap: 32px
+
+ul.icon-list
+  li
+    padding-left: 70px
+    position: relative
+    margin-bottom: 30px
+    text-align: left
+    .icon
+      position: absolute
+      top: 0
+      left: 0
+    &:last-child
+      margin-bottom: 0
+
+.row-reverse
+  flex-direction: column-reverse
+
+.row-reverse
+  &-xxl
+    @media (min-width: map-get($grid-breakpoints, xxl))
+      flex-direction: row-reverse
+  &-xl
+    @media (min-width: map-get($grid-breakpoints, xl))
+      flex-direction: row-reverse
+  &-lg
+    @media (min-width: map-get($grid-breakpoints, lg))
+      flex-direction: row-reverse
+  &-md
+    @media (min-width: map-get($grid-breakpoints, md))
+      flex-direction: row-reverse
+  &-sm
+    @media (min-width: map-get($grid-breakpoints, sm))
+      flex-direction: row-reverse
+
+.row
+  &-xxl
+    @media (min-width: map-get($grid-breakpoints, xxl))
+      flex-direction: row
+  &-xl
+    @media (min-width: map-get($grid-breakpoints, xl))
+      flex-direction: row
+  &-lg
+    @media (min-width: map-get($grid-breakpoints, lg))
+      flex-direction: row
+  &-md
+    @media (min-width: map-get($grid-breakpoints, md))
+      flex-direction: row
+  &-sm
+    @media (min-width: map-get($grid-breakpoints, sm))
+      flex-direction: row
